@@ -9,19 +9,19 @@ public class Utama {
         System.out.print("Masukkan password: ");
         String password = input.next();
 
-        Tiket tiket = new Tiket("admin", "password"); // Ganti dengan username dan password yang sesuai
+        Tiket tiket = new Tiket("", "");
 
         if (tiket.login(username, password)) {
-            int choice;
+            int pilihan;
             do {
                 System.out.println("\nMenu:");
                 System.out.println("1. Input Data Transaksi");
                 System.out.println("2. Lihat Data Tiket");
                 System.out.println("3. Keluar");
                 System.out.print("Pilih menu (1/2/3): ");
-                choice = input.nextInt();
+                pilihan = input.nextInt();
 
-                switch (choice) {
+                switch (pilihan) {
                     case 1:
                         tiket.inputDataTransaksi();
                         break;
@@ -34,7 +34,7 @@ public class Utama {
                     default:
                         System.out.println("Pilihan tidak valid.");
                 }
-            } while (choice != 3);
+            } while (pilihan != 3);
         } else {
             System.out.println("Login gagal. Username atau password salah.");
         }

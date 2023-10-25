@@ -15,7 +15,8 @@ class Tiket {
     }
 
     public boolean login(String enteredUsername, String enteredPassword) {
-        return this.username.equals(enteredUsername) && this.password.equals(enteredPassword);
+        return this.username.equals(enteredUsername) &&
+        this.password.equals(enteredPassword);
     }
 
     public void inputDataTransaksi() {
